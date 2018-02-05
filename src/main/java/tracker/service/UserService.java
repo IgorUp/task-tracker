@@ -1,5 +1,6 @@
 package tracker.service;
 
+import org.springframework.security.access.annotation.Secured;
 import tracker.model.User;
 
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.List;
  */
 public interface UserService {
 
+    @Secured({"ROLE_ADMIN", "ROLE_MANAGER"})
     List<User> userList();
 
     User userGet(Integer id);

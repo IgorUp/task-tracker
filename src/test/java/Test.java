@@ -1,3 +1,5 @@
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -7,6 +9,9 @@ import java.util.regex.Pattern;
 public class Test {
 
     public static void main(String[] arg) {
+
+        BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
+        System.out.println(encoder.encode("1234"));
 
         class Qwe {
             public boolean test (String testString){

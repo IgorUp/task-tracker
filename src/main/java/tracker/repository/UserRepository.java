@@ -9,4 +9,5 @@ import tracker.model.User;
  */
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
+    User getUserByEmail(String email);
 }
